@@ -1,0 +1,12 @@
+.post {
+margin-bottom: 20px;
+display: flex;
+}
+.posts{
+line-height: 20px;    
+}
+.avatars {
+    width: 45px;
+    height: 45px;
+    border-radius: 60px;
+}

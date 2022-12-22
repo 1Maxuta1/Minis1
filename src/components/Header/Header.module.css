@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-top-left-radius: 2px;
+  grid-area: header;
+  background: linear-gradient(
+      217deg,
+      rgba(248, 44, 156, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(248, 17, 190, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(
+      336deg,
+      rgba(202, 44, 250, 0.8),
+      rgba(247, 4, 255, 0) 70.71%
+    );
+}
+.logo {
+  width: 28px;
+  height: 23px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.logo-block {
+  font-size: 28px;
+  display: flex;
+}
+.icons {
+  margin-left: 10px;
+  display: flex;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+  padding: 0px 20px;
+}
+#search {
+  font-size: 30px;
+  border-radius: 60px;
+  margin-right: 20px;
+  background-color: rgb(211, 211, 211);
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 60px;
+}

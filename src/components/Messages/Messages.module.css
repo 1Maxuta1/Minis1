@@ -1,0 +1,42 @@
+.wrapper {
+  background: linear-gradient(
+    to top,
+    rgb(250, 138, 213),
+    90%,
+    rgb(239, 88, 253)
+  );
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  border-top: 1px solid black;
+  padding-left: 20px;
+}
+.dialog{
+  display: grid;
+ 
+
+}
+.messages-title {
+  font-size: 35px;
+  width: 100%;
+  border-bottom: 2px solid rgb(32, 32, 32);
+}
+
+.avatars {
+  width: 45px;
+  height: 45px;
+  border-radius: 60px;
+}
+.header-info{
+  display: grid;
+  grid-template-areas:
+    "dialogs message message"
+    "dialogs message message";
+}
+.header-info:active{
+  color: aqua;
+}
+.info-icon {
+  height: 30px;
+  width: 30px;
+}

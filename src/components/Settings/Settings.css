@@ -1,0 +1,13 @@
+.content{
+    grid-area: content;
+    background: linear-gradient(to top, rgb(250, 138, 213), 90%, rgb(239, 88, 253));
+    }
+    .content-image {
+     width: auto;
+     margin: 10px;
+    }
+.content-wrapper{
+    margin-left: 20px;
+    height: 100vh;
+    min-height : 100vh;
+}    
