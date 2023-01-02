@@ -1,42 +1,63 @@
+*{
+  text-decoration: none;
+}
 .wrapper {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgb(250, 138, 213),
     90%,
     rgb(239, 88, 253)
-  );
+  ); */
+  background: linear-gradient(to top,
+    rgb(43, 41, 41),
+    90%,
+    rgb(22, 22, 22));
+    
   height: 100vh;
   min-height: 100%;
   width: 100%;
   border-top: 1px solid black;
   padding-left: 20px;
-}
-.dialog{
-  display: grid;
  
-
 }
-.messages-title {
+.dialog_items .active {
+  color: blueviolet;
+}
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+.dialog {
+  text-decoration: none;
+ 
+}
+
+.title {
+  margin-top: 10px;
+  color: rgb(216, 158, 255);
   font-size: 35px;
   width: 100%;
   border-bottom: 2px solid rgb(32, 32, 32);
 }
-
+.message {
+  text-decoration: none;
+  color: wheat;
+}
 .avatars {
   width: 45px;
   height: 45px;
   border-radius: 60px;
 }
-.header-info{
-  display: grid;
-  grid-template-areas:
-    "dialogs message message"
-    "dialogs message message";
-}
-.header-info:active{
-  color: aqua;
-}
-.info-icon {
+.info_icon {
   height: 30px;
   width: 30px;
+}
+.icons {
+  margin-left: 10px;
+  display: flex;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+  padding: 0px 20px;
 }

@@ -6,9 +6,14 @@
     linear-gradient(217deg, rgba(248, 44, 156, 0.8), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(248, 17, 190, 0.8), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(202, 44, 250, 0.8), rgba(247, 4, 255, 0) 70.71%);
-    
+    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    border-top: 1px solid black;
     }
-.nav-title {
+.nav_title .a {
+}
+.item a{
     margin: 15px;
     transition: transform 250ms;
     font-size: 32px;
@@ -18,10 +23,13 @@
     border-radius: 15px;
     width: fit-content;
     text-decoration: none;
-}
-.nav-title:hover{
-    background-color: rgb(42, 138, 255);
+    color: black;
+    padding-right: 10px;
+    text-decoration: none;
     background-size: 20px;
     transform: translateY(-10px);
-    background: rgba(0, 0, 0, .2);
+}
+.nav_title:hover{
+    background-size: 20px;
+    transform: translateY(-10px);
 }

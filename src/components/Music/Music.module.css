@@ -1,0 +1,49 @@
+.wrapper{
+    background: linear-gradient(
+    /* to top,
+    rgb(250, 138, 213),
+    90%,
+    rgb(239, 88, 253) */
+  );
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  border-top: 1px solid black;
+  padding-top: 20px;
+  padding-left: 20px;
+    background: linear-gradient(to top,
+    rgb(43, 41, 41),
+    90%,
+    rgb(22, 22, 22));
+    
+}
+
+.title{
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: rgb(216, 158, 255);
+}
+
+.main_content {
+  display: grid;
+  grid-template-areas:
+  "section section section section section section"
+  "section section section section section section";
+}
+.section img {
+  height: 200px;
+  width: 200px;
+    border-radius: 8px;
+    background: center center no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    transition: 0.2s; 
+  
+}
+.section img:hover {
+  opacity: 1;
+}
+.section p {
+font-size: 24px;
+color: rgb(216, 158, 255);
+}

@@ -1,12 +1,12 @@
 import React from "react";
-import '../Content/Content.css'
+import styles from  '../Content/Content.module.css'
 import MyPosts from "../Content/Posts/MyPosts"
 
 const Profile = () => {
     return (
-        <div className="content"> 
-        <div className="content-wrapper">
-        <img src="/img/content-image.jpg" alt='content' className="content-image"/> 
+        <div className={styles.content}> 
+        <div className={styles.content_wrapper}>
+        <img src="/img/content-image.jpg" alt='content' className={styles.content_image}/> 
        <MyPosts />
        </div>
        </div>

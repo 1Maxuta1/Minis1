@@ -1,0 +1,17 @@
+.content{
+    background: linear-gradient(to top,
+    rgb(43, 41, 41),
+    90%,
+    rgb(22, 22, 22));
+}
+    /* background: linear-gradient(to top, rgb(250, 138, 213), 90%, rgb(239, 88, 253));
+     */
+    .content_image {
+     width: auto;
+     margin: 10px;
+    }
+.content_wrapper{
+    margin-left: 20px;
+    height: 100vh;
+    min-height : 100vh;
+}    
