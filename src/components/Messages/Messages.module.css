@@ -2,16 +2,16 @@
   text-decoration: none;
 }
 .wrapper {
-  /* background: linear-gradient(
+  background: linear-gradient(
     to top,
     rgb(250, 138, 213),
     90%,
     rgb(239, 88, 253)
-  ); */
-  background: linear-gradient(to top,
+  );
+  /* background: linear-gradient(to top,
     rgb(43, 41, 41),
     90%,
-    rgb(22, 22, 22));
+    rgb(22, 22, 22)); */
     
   height: 100vh;
   min-height: 100%;
@@ -20,10 +20,11 @@
   padding-left: 20px;
  
 }
-.dialog_items .active {
-  color: blueviolet;
+.dialog .active a{
+  color: white;
 }
 .dialogs {
+
   display: grid;
   grid-template-columns: 2fr 10fr;
 }
