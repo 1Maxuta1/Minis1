@@ -1,22 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styles from "./Messages.module.css";
+import DialogItem from "./DialogItem/DialogItem";
 
-const DialogItem = (props) => {
-  let path = "/Messages/" + props.id;
-  return (
-    <div className={styles.dialog + "" + styles.active}>
-      <NavLink to={path}>
-        <img src="/img/avatar1.jpg" alt="avatar" className={styles.avatars} />
-        {props.name}
-        @_maxuta_
-        {/* <img
-      src="/img/dialogs-section-icon.png" className={styles.info_icon} alt="icons">
-        </img> */}
-      </NavLink>
-    </div>
-  );
-};
 const Message = (props) => {
   return (
     <div className={styles.message}>{props.message}</div>
@@ -24,6 +9,7 @@ const Message = (props) => {
 }
 
 const Messages = (props) => {
+  
   let dialogsData = [
     {id:1 , name: 'Max'},
     {id:2 , name: 'Timofey'},
