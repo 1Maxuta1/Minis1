@@ -2,15 +2,14 @@ import React from "react";
 import styles from'./MyPosts.module.css';
 import Post from "./Post/Post";
 
-let MyPostsData = [
-    {id:1 , message: "Hi, it's me", likesCount: 2, },
-    {id:2 , message: "Nah, you're fake", likesCount: 6},
-    {id:3 , message: "Maybe, he is real", likesCount: 4}
-]
-let PostsElement = 
-MyPostsData.map( post => <Post message={post.message} id={post.id} likesCount={post.likesCount} src="/img/avatar1.jpg" />)
 
-const MyPosts = () => {
+
+const MyPosts = (props) => {
+    
+    let PostsElement = 
+props.myPostsData.map( post => <Post message={post.message} id={post.id} likesCount={post.likesCount} src="/img/avatar1.jpg" />)
+
+
 return (  <div className={styles.posts}>
 <div className={styles.content_item}>Avatar + description</div>
 <div className={styles.my_posts}>My posts</div>

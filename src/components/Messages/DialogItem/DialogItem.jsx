@@ -3,7 +3,7 @@ import styles from "./../Messages.module.css";
 import { NavLink } from "react-router-dom";
 
 const DialogItem = (props) => {
-  let path = "/Messages/" + props.id;
+  let path = "/messages/" + props.id;
   return (
     <div className={styles.dialog + "" + styles.active}>
       <NavLink to={path}>

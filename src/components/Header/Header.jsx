@@ -10,7 +10,7 @@ return ( <header className={styles.header}>
 <img src="/img/statistics.png" alt="" className={styles.icon}/>
 <img src="/img/bell.png" alt="bell" className={styles.icon}/>
 <img src="/img/letter.png" alt="letter" className={styles.icon}/>
-<input type="text" id={styles.search}></input>
+<input placeholder="Введите запрос" type="text" id={styles.search}></input>
 <img src="/img/avatar3.jpg" alt="avatar" className={styles.avatar}></img>
 </div>
 </header> 

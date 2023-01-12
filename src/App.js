@@ -12,7 +12,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { Routes } from "react-router";
 
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
     <div className="app-wrapper">
@@ -20,8 +20,8 @@ const App = () => {
       <Nav />
       <div className="app-wrapper-content">
         <Routes>
-      <Route path="/profile" element={<Profile/>}/> 
-       <Route exact path="/messages" element={<Messages/>}/>
+      <Route path="/profile" element={<Profile myPostsData = {props.myPostsData}/>}/> 
+       <Route path="/messages" element={<Messages dialogsData = {props.dialogsData} messagesData = {props.messagesData}/>}/>
        <Route path="/news" element={<News/>}/>
        <Route path="/music" element={<Music/>}/>
        <Route path="/settings" element={<Settings/>}/>
