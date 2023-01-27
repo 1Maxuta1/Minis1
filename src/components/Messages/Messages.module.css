@@ -17,21 +17,13 @@
   min-height: 100%;
   width: 100%;
   border-top: 1px solid black;
-  padding-left: 20px;
  
 }
-.dialog .active a{
-  color: white;
-}
-.dialogs {
-
+.section{
   display: grid;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 3fr 8fr;
 }
-.dialog {
-  text-decoration: none;
- 
-}
+
 
 .title {
   margin-top: 10px;
@@ -42,7 +34,10 @@
 }
 .message {
   text-decoration: none;
-  color: wheat;
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
 }
 .avatars {
   width: 45px;

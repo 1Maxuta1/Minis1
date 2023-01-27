@@ -1,5 +1,4 @@
 .nav {
-  border: 1px solid black;
   grid-area: nav;
   background: linear-gradient(
       217deg,
@@ -15,7 +14,6 @@
   height: 100vh;
   min-height: 100%;
   width: 100%;
-  border-top: 1px solid black;
 }
 .nav_title .active {
   background-size: 20px;
@@ -38,9 +36,19 @@
   background-size: 20px;
   transform: translateY(-10px);
 }
+.item:last-child {
+  padding-top: 20px;
+}
+
 .item:hover {
   transition: transform 0.2s;
   background-size: 20px;
   transform: translateY(-10px);
   color: blue;
+}
+.avatars {
+  width: 45px;
+  height: 45px;
+  border-radius: 60px;
+  margin-left: 15px;
 }

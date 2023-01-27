@@ -20,6 +20,15 @@ return (
 <div className={styles.item}> 
 <NavLink to="/settings" activeclassName={styles.nav_title + '' + styles.active}>Settings</NavLink>
 </div>
+<div className={styles.item}>                                                                                                                       
+<NavLink to="/Friends" activeclassName={styles.nav_title + '' + styles.active}>Friends</NavLink>
+</div>
+<img src="/img/avatar1.jpg" alt="friend" className={styles.avatars}></img>
+<img src="/img/avatar2.jpg" alt="friend" className={styles.avatars}></img>
+<img src="/img/avatar3.jpg" alt="friend" className={styles.avatars}></img>
+<img src="/img/avatar3.jpg" alt="friend" className={styles.avatars}></img>
+<img src="/img/avatar1.jpg" alt="friend" className={styles.avatars}></img>
+<img src="/img/avatar1.jpg" alt="friend" className={styles.avatars}></img>
 </nav> )
 }
 
