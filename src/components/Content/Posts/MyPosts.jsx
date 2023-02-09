@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import { addPostActionCreator } from "../../../States/state";
+import { updateNewPostActionCreator } from "../../../States/state";
 
 const MyPosts = (props) => {
   let PostsElement = props.myPostsData.map((post) => (
@@ -15,18 +17,20 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
   // let addUser = React.createRef();
 
-  let addPost = () => {
-    props.addPost();
+  const addPost = () => {
+    // props.addPost();
+    props.dispatch(addPostActionCreator());
   };
 
   let onPostChange = () => {
+    // props.updateNewPostText(text);
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    let action = updateNewPostActionCreator(text);
+    props.dispatch(action);
   };
 
   return (
     <div className={styles.posts}>
-      <div className={styles.content_item}>Avatar + description</div>
       <div>
         <textarea
           onChange={onPostChange}
@@ -37,7 +41,7 @@ const MyPosts = (props) => {
       <button type="button" onClick={addPost}>
         Create a post
       </button>
-      <div className={styles.my_posts}>My posts</div>
+      <h2 className={styles.my_posts}>My posts</h2>
       {PostsElement}
       {/* <Post message={post.message} id={MyPostsData[0].id} likesCount={MyPostsData[0].likesCount} src="/img/avatar1.jpg" />
 <Post message={MyPostsData[1].message} id={MyPostsData[1].id}  likesCount={MyPostsData[1].likesCount} src="/img/avatar2.jpg"/>

@@ -12,8 +12,10 @@ export let rerenderTree = (state) => {
     <BrowserRouter>
       <App
         state={state}
-        addPost={store.addPost.bind(store)}
-        updateNewPostText={store.updateNewPostText.bind(store)}
+        dispatch={store.dispatch.bind(store)}
+        store={store}
+        // addPost={store.addPost.bind(store)}
+        // updateNewPostText={store.updateNewPostText.bind(store)}
       />
     </BrowserRouter>
   );
