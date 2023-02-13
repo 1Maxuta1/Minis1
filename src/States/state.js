@@ -50,32 +50,7 @@ let store = {
     this._callSubscriber = observer;
   },
 
-  dispatch(action) {
-    if (action.type === ADD_POST) {
-      let newPost = {
-        id: this._state.ProfilePage.myPostsData.length + 1,
-        message: this._state.ProfilePage.newPostText,
-        likesCount: 0,
-      };
-      this._state.ProfilePage.myPostsData.push(newPost);
-      this._state.ProfilePage.newPostText = "";
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_POST) {
-      this._state.ProfilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    } else if (action.type === NEW_MESSAGE_BODY) {
-      this._state.MessagesPage.newMessageBody = action.body;
-      this._callSubscriber(this._state);
-    } else if (action.type === SEND_MESSAGE) {
-      let body = this._state.MessagesPage.newMessageBody;
-      this._state.MessagesPage.messagesData.push({
-        id: this._state.MessagesPage.messagesData.length + 1,
-        message: body,
-      });
-      this._state.MessagesPage.newMessageBody = "";
-      this._callSubscriber(this._state);
-    }
-  },
+  dispatch(action) {},
 };
 
 export const addPostActionCreator = () => ({
