@@ -22,7 +22,7 @@ const App = (props) => {
             path="/profile"
             element={
               <Profile
-                state={props.state.ProfilePage}
+                profilePage={props.state.profilePage}
                 dispatch={props.dispatch}
                 // addPost={store.addPost.bind(store)}
                 // updateNewPostText={store.updateNewPostText.bind(store)}

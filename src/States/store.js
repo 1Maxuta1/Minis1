@@ -1,7 +1,6 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST = "UPDATE-NEW-POST-TEXT";
-const NEW_MESSAGE_BODY = "NEW-MESSAGE-BODY";
-const SEND_MESSAGE = "SEND-MESSAGE";
+import messagesReducer from "./messages-reducer";
+import profileReducer from "./profile-reducer";
+import sidebarReducer from "./sidebar-reducer";
 
 let store = {
   _state: {
@@ -11,7 +10,7 @@ let store = {
         { id: 2, message: "Nah, you're fake", likesCount: 6 },
         { id: 3, message: "Maybe, he is real", likesCount: 4 },
       ],
-      newPostText: "Hi",
+      newPostText: "",
     },
     MessagesPage: {
       dialogsData: [
@@ -46,41 +45,21 @@ let store = {
   getState() {
     return this._state;
   },
-  subcribe(observer) {
+  subscribe(observer) {
     this._callSubscriber = observer;
   },
 
-  dispatch(action) {},
+  dispatch(action) {
+    this._state.ProfilePage = profileReducer(this._state.ProfilePage, action);
+    this._state.MessagesPage = messagesReducer(
+      this._state.MessagesPage,
+      action
+    );
+    // this._state.DialogsData = dialogsReducer(this._state.MessagesPage, action);
+    this._state.Sidebar = sidebarReducer(this._state.sidebar, action);
+    this._callSubscriber(this._state);
+  },
 };
 
-export const addPostActionCreator = () => ({
-  type: ADD_POST,
-});
-export const updateNewPostActionCreator = (text) => ({
-  type: UPDATE_NEW_POST,
-  newText: text,
-});
-
-export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
-
-export const updateNewMessageBodyCreator = (body) => ({
-  type: NEW_MESSAGE_BODY,
-  body: body,
-});
 export default store;
 window.store = store;
-
-// _addPost() {
-//   let newPost = {
-//     id: 4,
-//     message: this._state.ProfilePage.newPostText,
-//     likesCount: 0,
-//   };
-//   this._state.ProfilePage.myPostsData.push(newPost);
-//   this._state.ProfilePage.newPostText = "";
-//   this._callSubscriber(this._state);
-// },
-// _updateNewPostText(newText) {
-//   this._state.ProfilePage.newPostText = newText;
-//   this._callSubscriber(this._state);
-// },

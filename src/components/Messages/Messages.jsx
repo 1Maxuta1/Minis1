@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Messages.module.css";
 import DialogItem from "./DialogItem/DialogItem";
-import { sendMessageCreator } from "../../States/state";
-import { updateNewMessageBodyCreator } from "../../States/state";
+import { sendMessageCreator } from "../../States/messages-reducer";
+import { updateNewMessageBodyCreator } from "../../States/messages-reducer";
 
 const Message = (props) => {
   return <div className={styles.message}>{props.message}</div>;

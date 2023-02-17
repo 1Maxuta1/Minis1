@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import { addPostActionCreator } from "../../../States/state";
-import { updateNewPostActionCreator } from "../../../States/state";
+import { addPostActionCreator } from "../../../States/profile-reducer";
+import { updateNewPostActionCreator } from "../../../States/profile-reducer";
 
 const MyPosts = (props) => {
   let PostsElement = props.myPostsData.map((post) => (
@@ -43,9 +43,6 @@ const MyPosts = (props) => {
       </button>
       <h2 className={styles.my_posts}>My posts</h2>
       {PostsElement}
-      {/* <Post message={post.message} id={MyPostsData[0].id} likesCount={MyPostsData[0].likesCount} src="/img/avatar1.jpg" />
-<Post message={MyPostsData[1].message} id={MyPostsData[1].id}  likesCount={MyPostsData[1].likesCount} src="/img/avatar2.jpg"/>
-<Post message={MyPostsData[2].message} id={MyPostsData[2].id}  likesCount={MyPostsData[2].likesCount} src="/img/avatar3.jpg" /> */}
     </div>
   );
 };

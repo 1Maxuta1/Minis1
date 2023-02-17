@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import store from "./States/state";
+import store from "./States/redux-store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 export let rerenderTree = (state) => {
@@ -22,6 +22,9 @@ export let rerenderTree = (state) => {
 };
 
 rerenderTree(store.getState());
-store.subcribe(rerenderTree);
+store.subscribe(() => {
+  let state = store.getState();
+  rerenderTree(state);
+});
 
 reportWebVitals();
