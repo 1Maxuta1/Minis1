@@ -26,19 +26,21 @@ let initialState = {
 const messagesReducer = (state = initialState, action) => {
   switch (action.type) {
     case NEW_MESSAGE_BODY:
-      state.newMessageBody = action.body;
-      break;
-    default:
+      return { ...state, newMessageBody: action.body };
     case SEND_MESSAGE:
       let body = state.newMessageBody;
-      state.newMessageBody = "";
-      state.messagesData.push({
-        id: state.messagesData.length + 1,
-        message: body,
-      });
-      break;
+      return {
+        ...state,
+        newMessageBody: "",
+        messagesData: [
+          ...state.messagesData,
+          { id: state.messagesData.length + 1, message: body },
+        ],
+      };
+
+    default:
+      return state;
   }
-  return state;
 };
 
 export const sendMessageCreator = () => ({ type: SEND_MESSAGE });

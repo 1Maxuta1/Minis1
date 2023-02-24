@@ -4,10 +4,17 @@ import profileReducer from "./profile-reducer";
 import sidebarReducer from "./sidebar-reducer";
 
 let reducers = combineReducers({
-  profilePage: profileReducer,
+  ProfilePage: profileReducer,
   MessagesPage: messagesReducer,
   Sidebar: sidebarReducer,
 });
-let store = configureStore({ reducer: reducers });
+let store = configureStore({
+  reducer: reducers,
+  // middleware: (getDefaultMiddleware) =>
+  //   getDefaultMiddleware({
+  //     immutableCheck: false,
+  //     serializableCheck: false,
+  //   }),
+});
 
 export default store;

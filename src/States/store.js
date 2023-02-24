@@ -20,6 +20,7 @@ let store = {
         { id: 4, name: "Maria", nickname: "@kostamarina" },
         { id: 5, name: "Yehor", nickname: "@teengor" },
         { id: 6, name: "Anya", nickname: "@anya" },
+        { id: 7, name: "Anya", nickname: "@anya" },
       ],
       messagesData: [
         { id: 1, message: "Привіт, як ти?" },

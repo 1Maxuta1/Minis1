@@ -3,8 +3,9 @@ import styles from "./App.module.css";
 import Profile from "./components/Content/Content";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
+import Friends from "./components/Friends/Friends";
 // import SignUp from "./components/SignUp/SignUp";
-import Messages from "./components/Messages/Messages";
+import MessagesContainer from "./components/Messages/MessagesContainer";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
@@ -22,27 +23,21 @@ const App = (props) => {
             path="/profile"
             element={
               <Profile
-                profilePage={props.state.profilePage}
-                dispatch={props.dispatch}
-                // addPost={store.addPost.bind(store)}
-                // updateNewPostText={store.updateNewPostText.bind(store)}
+              // store={props.store}
+              // addPost={store.addPost.bind(store)}
+              // updateNewPostText={store.updateNewPostText.bind(store)}
               />
             }
           />
           <Route
             path="/messages"
-            element={
-              <Messages
-                MessagesData={props.state.MessagesData}
-                newMessageBody={props.newMessageBody}
-                state={props.state.MessagesPage}
-                dispatch={props.dispatch}
-              />
-            }
+            element={<MessagesContainer />}
+            // store={props.store}
           />
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/friends" element={<Friends />} />
         </Routes>
       </div>
       {/* <SignUp/> */}

@@ -1,38 +1,40 @@
 import React from "react";
 import styles from "./Messages.module.css";
 import DialogItem from "./DialogItem/DialogItem";
-import { sendMessageCreator } from "../../States/messages-reducer";
-import { updateNewMessageBodyCreator } from "../../States/messages-reducer";
 
 const Message = (props) => {
   return <div className={styles.message}>{props.message}</div>;
 };
 
 const Messages = (props) => {
-  let dialogsElements = props.state.dialogsData.map((dialog) => (
+  let state = props.MessagesPage;
+
+  let dialogsElements = state.dialogsData.map((dialog) => (
     <DialogItem
+      src={dialog.src}
       message={dialog.message}
       id={dialog.id}
       name={dialog.name}
       nickname={dialog.nickname}
+      key={dialog.id}
     />
   ));
 
-  let messagesElements = props.state.messagesData.map((message) => (
-    <Message message={message.message} id={message.id} />
+  let messagesElements = state.messagesData.map((message) => (
+    <Message message={message.message} key={message.id} id={message.id} />
   ));
 
-  let newMessageBody = props.state.newMessageBody;
+  let newMessageBody = state.newMessageBody;
 
   const sendMessage = () => {
     // props.addPost();
-    props.dispatch(sendMessageCreator());
+    props.sendMessage();
   };
 
-  let updateNewMessageBody = (event) => {
+  let onNewMessageBody = (event) => {
     // props.updateNewPostText(text);
     let body = event.target.value;
-    props.dispatch(updateNewMessageBodyCreator(body));
+    props.updateNewMessageBody(body);
   };
 
   return (
@@ -47,7 +49,7 @@ const Messages = (props) => {
         <textarea
           placeholder="Enter your message"
           value={newMessageBody}
-          onChange={updateNewMessageBody}
+          onChange={onNewMessageBody}
         ></textarea>
       </div>
       <button className={styles.button} type="button" onClick={sendMessage}>

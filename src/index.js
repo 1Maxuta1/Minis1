@@ -5,26 +5,19 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import store from "./States/redux-store";
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-export let rerenderTree = (state) => {
-  root.render(
-    <BrowserRouter>
-      <App
-        state={state}
-        dispatch={store.dispatch.bind(store)}
-        store={store}
-        // addPost={store.addPost.bind(store)}
-        // updateNewPostText={store.updateNewPostText.bind(store)}
-      />
-    </BrowserRouter>
-  );
-};
 
-rerenderTree(store.getState());
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderTree(state);
-});
+root.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>
+);
 
 reportWebVitals();
+
+// addPost={store.addPost.bind(store)}
+// updateNewPostText={store.updateNewPostText.bind(store)}

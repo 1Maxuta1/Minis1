@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import { addPostActionCreator } from "../../../States/profile-reducer";
-import { updateNewPostActionCreator } from "../../../States/profile-reducer";
 
 const MyPosts = (props) => {
   let PostsElement = props.myPostsData.map((post) => (
@@ -11,22 +9,23 @@ const MyPosts = (props) => {
       id={post.id}
       likesCount={post.likesCount}
       src="/img/avatar1.jpg"
+      key={post.id}
     />
   ));
 
   let newPostElement = React.createRef();
   // let addUser = React.createRef();
 
-  const addPost = () => {
-    // props.addPost();
-    props.dispatch(addPostActionCreator());
+  let addPost = () => {
+    props.addPost();
+    // props.dispatch(addPostActionCreator());
   };
 
   let onPostChange = () => {
-    // props.updateNewPostText(text);
     let text = newPostElement.current.value;
-    let action = updateNewPostActionCreator(text);
-    props.dispatch(action);
+    props.updateNewPostText(text);
+    // let action = updateNewPostActionCreator(text);
+    // props.dispatch(action);
   };
 
   return (
