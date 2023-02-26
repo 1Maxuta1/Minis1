@@ -47,7 +47,7 @@ const Nav = () => {
       </div>
       <div className={styles.item}>
         <NavLink
-          to="/Friends"
+          to="/friends"
           activeclassname={styles.nav_title + "" + styles.active}
         >
           Friends

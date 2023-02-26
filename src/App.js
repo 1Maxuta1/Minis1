@@ -3,12 +3,12 @@ import styles from "./App.module.css";
 import Profile from "./components/Content/Content";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
-import Friends from "./components/Friends/Friends";
 // import SignUp from "./components/SignUp/SignUp";
 import MessagesContainer from "./components/Messages/MessagesContainer";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
+import FriendsContainer from "./components/Friends/FriendsContainer";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router";
 
@@ -37,7 +37,7 @@ const App = (props) => {
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/friends" element={<Friends />} />
+          <Route path="/friends" element={<FriendsContainer />} />
         </Routes>
       </div>
       {/* <SignUp/> */}
