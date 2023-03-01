@@ -1,16 +1,7 @@
 .nav {
   grid-area: nav;
-  background: linear-gradient(
-      217deg,
-      rgba(248, 44, 156, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, rgba(248, 17, 190, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(
-      336deg,
-      rgba(202, 44, 250, 0.8),
-      rgba(247, 4, 255, 0) 70.71%
-    );
+
+  background: linear-gradient(106deg, #aea4e3, #d3ffe8);
   height: 100vh;
   min-height: 100%;
   width: 100%;
@@ -52,3 +43,15 @@
   border-radius: 60px;
   margin-left: 15px;
 }
+/* 
+background: linear-gradient(
+  217deg,
+  rgba(248, 44, 156, 0.8),
+  rgba(255, 0, 0, 0) 70.71%
+),
+linear-gradient(127deg, rgba(248, 17, 190, 0.8), rgba(0, 255, 0, 0) 70.71%),
+linear-gradient(
+  336deg,
+  rgba(202, 44, 250, 0.8),
+  rgba(247, 4, 255, 0) 70.71%
+); */

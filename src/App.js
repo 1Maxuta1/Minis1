@@ -11,6 +11,7 @@ import Settings from "./components/Settings/Settings";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router";
+import { Hook } from "./testHooks";
 
 const App = (props) => {
   return (
@@ -38,6 +39,7 @@ const App = (props) => {
           <Route path="/music" element={<Music />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/friends" element={<FriendsContainer />} />
+          <Route path="/testhook" element={<Hook />} />
         </Routes>
       </div>
       {/* <SignUp/> */}

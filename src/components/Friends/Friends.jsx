@@ -1,8 +1,26 @@
 import React from "react";
 import "../Friends/Friends.module.css";
 import styles from "./Friends.module.css";
+import axios from "axios";
 
 const Friends = (props) => {
+  const options = {
+    method: "GET",
+    url: "https://instagram28.p.rapidapi.com/user_info",
+    params: { user_name: "instagram" },
+    headers: {
+      "X-RapidAPI-Key": "7d25b7e25dmsh3237aa0a89a8b80p116f9ejsn5d55fa83bb46",
+      "X-RapidAPI-Host": "instagram28.p.rapidapi.com",
+    },
+  };
+
+  axios.request(options).then(function (response) {
+    props.setFriends(response.data);
+  });
+  // .catch(function (error) {
+  //   console.error(error);
+  // });
+
   return (
     <div className={styles.wrapper}>
       {props.friendsData.map((friend) => (
@@ -16,6 +34,8 @@ const Friends = (props) => {
               />
               <div>{friend.firstName}</div>
               <div>{friend.secondName}</div>
+              {/* <div>{friend.username}</div>
+              <div>{friend.full_name}</div> */}
             </div>
           </span>
           <span>
