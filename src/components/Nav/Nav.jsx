@@ -53,12 +53,38 @@ const Nav = () => {
           Friends
         </NavLink>
       </div>
-      <img src="/img/avatar1.jpg" alt="friend" className={styles.avatars}></img>
-      <img src="/img/avatar2.jpg" alt="friend" className={styles.avatars}></img>
-      <img src="/img/avatar3.jpg" alt="friend" className={styles.avatars}></img>
-      <img src="/img/avatar3.jpg" alt="friend" className={styles.avatars}></img>
-      <img src="/img/avatar1.jpg" alt="friend" className={styles.avatars}></img>
-      <img src="/img/avatar1.jpg" alt="friend" className={styles.avatars}></img>
+      <div className={styles.friends}>
+        <img
+          src="/img/avatar1.jpg"
+          alt="friend"
+          className={styles.avatars}
+        ></img>
+        <img
+          src="/img/avatar2.jpg"
+          alt="friend"
+          className={styles.avatars}
+        ></img>
+        <img
+          src="/img/avatar3.jpg"
+          alt="friend"
+          className={styles.avatars}
+        ></img>
+        <img
+          src="/img/avatar3.jpg"
+          alt="friend"
+          className={styles.avatars}
+        ></img>
+        <img
+          src="/img/avatar1.jpg"
+          alt="friend"
+          className={styles.avatars}
+        ></img>
+        <img
+          src="/img/avatar1.jpg"
+          alt="friend"
+          className={styles.avatars}
+        ></img>
+      </div>
     </nav>
   );
 };

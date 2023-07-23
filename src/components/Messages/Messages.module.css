@@ -2,6 +2,7 @@
   text-decoration: none;
 }
 .wrapper {
+  padding-left: 20px;
   background: linear-gradient(
     to top,
     rgb(250, 138, 213),
@@ -16,21 +17,22 @@
   height: 100vh;
   min-height: 100%;
   width: 100%;
-  border-top: 1px solid black;
  
 }
 .section{
-  display: grid;
-  grid-template-columns: 3fr 8fr;
+  display: flex;
+  row-gap: 30px;
+  column-gap: 30px;
 }
 
 
 .title {
-  margin-top: 10px;
   color: rgb(207, 207, 207);
   font-size: 35px;
   width: 100%;
-  border-bottom: 2px solid rgb(32, 32, 32);
+}
+.dialog{
+  background-color: black;
 }
 .message {
   text-decoration: none;
@@ -38,6 +40,10 @@
   display: flex;
   align-items: center;
   font-size: 17px;
+}
+.dialog:hover{
+  color: gold;
+  text-decoration: none;
 }
 .avatars {
   width: 45px;

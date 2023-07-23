@@ -42,7 +42,6 @@ const Messages = (props) => {
       <div className={styles.title}>Your dialogs</div>
       <div className={styles.section}>
         <div className={styles.dialogs}>{dialogsElements}</div>
-
         <div className={styles.messages}>{messagesElements}</div>
       </div>
       <div>

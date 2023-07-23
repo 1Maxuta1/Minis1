@@ -1,24 +1,27 @@
 .nav {
   grid-area: nav;
-
   background: linear-gradient(106deg, #aea4e3, #d3ffe8);
   height: 100vh;
   min-height: 100%;
   width: 100%;
 }
-.nav_title .active {
-  background-size: 20px;
-  transform: translateY(-10px);
-  color: blue;
+.item:first-child {
+border-top: none;
 }
-.item a {
-  margin: 15px;
+.item {
+  border-top: 1px solid black;
+  column-gap: 20px;
+  padding: 12px 10px;
+}
+.item:last-child{
+  margin-bottom: 10px;
+}
 
+.item a {
   font-size: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
   width: fit-content;
   text-decoration: none;
   color: black;
@@ -27,15 +30,14 @@
   background-size: 20px;
   transform: translateY(-10px);
 }
-.item:last-child {
-  padding-top: 20px;
-}
 
 .item:hover {
-  transition: transform 0.2s;
-  background-size: 20px;
-  transform: translateY(-10px);
-  color: blue;
+  opacity: 0.55;
+  transition-duration: 0.5s;
+}
+.friends{
+  border-top: 1px solid black;
+  padding-top: 10px;
 }
 .avatars {
   width: 45px;

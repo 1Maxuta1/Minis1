@@ -9,12 +9,17 @@ import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import FriendsContainer from "./components/Friends/FriendsContainer";
+import AuthPage from "./components/AuthPage/AuthPage";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router";
 import { Hook } from "./testHooks";
 
 const App = (props) => {
   return (
+    // <AuthPage />
+    // true ?
+
+    // ) : (
     <div className={styles.app_wrapper}>
       <Header />
       <Nav />

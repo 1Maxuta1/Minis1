@@ -1,6 +1,7 @@
 
 .posts{
-line-height: 20px;    
+line-height: 20px; 
+
 }
 .avatars {
     width: 45px;
@@ -9,8 +10,13 @@ line-height: 20px;
 }
 .posts button{
     font-size: 25px;
+    margin-left: 10px;
+}
+.posts textarea {
+    margin-left: 10px;
 }
 
 .my_posts{
  font-size: 35px;
+ margin-left: 10px;
 }

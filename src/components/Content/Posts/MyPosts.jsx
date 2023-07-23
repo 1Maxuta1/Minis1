@@ -3,16 +3,6 @@ import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let PostsElement = props.myPostsData.map((post) => (
-    <Post
-      message={post.message}
-      id={post.id}
-      likesCount={post.likesCount}
-      src="/img/avatar1.jpg"
-      key={post.id}
-    />
-  ));
-
   let newPostElement = React.createRef();
   // let addUser = React.createRef();
 
@@ -27,6 +17,16 @@ const MyPosts = (props) => {
     // let action = updateNewPostActionCreator(text);
     // props.dispatch(action);
   };
+
+  let PostsElement = props.myPostsData.map((post) => (
+    <Post
+      message={post.message}
+      id={post.id}
+      likesCount={post.likesCount}
+      src="/img/avatar1.jpg"
+      key={post.id}
+    />
+  ));
 
   return (
     <div className={styles.posts}>
