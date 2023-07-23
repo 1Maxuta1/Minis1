@@ -3,12 +3,12 @@
 }
 .wrapper {
   padding-left: 20px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgb(250, 138, 213),
     90%,
     rgb(239, 88, 253)
-  );
+  ); */
   /* background: linear-gradient(to top,
     rgb(43, 41, 41),
     90%,
@@ -27,7 +27,7 @@
 
 
 .title {
-  color: rgb(207, 207, 207);
+  color: black;
   font-size: 35px;
   width: 100%;
 }

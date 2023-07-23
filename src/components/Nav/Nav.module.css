@@ -1,9 +1,9 @@
 .nav {
   grid-area: nav;
+  border-right: 1px solid black;
   background: linear-gradient(106deg, #aea4e3, #d3ffe8);
   height: 100vh;
   min-height: 100%;
-  width: 100%;
 }
 .item:first-child {
 border-top: none;

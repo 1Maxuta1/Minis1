@@ -1,26 +1,13 @@
 .wrapper{
-    background: linear-gradient(
-    /* to top,
-    rgb(250, 138, 213),
-    90%,
-    rgb(239, 88, 253) */
-  );
-  height: 100vh;
-  min-height: 100%;
-  width: 100%;
-  border-top: 1px solid black;
+
   padding-top: 20px;
   padding-left: 20px;
-    background: linear-gradient(to top,
-    rgb(43, 41, 41),
-    90%,
-    rgb(22, 22, 22));
 }
 
 .title{
-    font-size: 30px;
+    font-size: 40px;
     padding-bottom: 20px;
-    color: rgb(216, 158, 255);
+    color: rgb(22, 22, 22);
 }
 
 .main_content {
@@ -29,9 +16,21 @@
   "section section section section section section"
   "section section section section section section";
 }
+@media (max-width: 1260px) { 
+  .section img {
+    height: 150px;
+    width: 150px;
+  }
+ }
+ @media (max-width: 720px) { 
+  .section img {
+    height: 175px;
+    width: 175px;
+  }
+ }
 .section img {
-  height: 200px;
-  width: 200px;
+  height: 175px;
+  width: 175px;
     border-radius: 8px;
     background: center center no-repeat;
     background-size: cover;
@@ -44,5 +43,5 @@
 }
 .section p {
 font-size: 24px;
-color: rgb(216, 158, 255);
+color: rgb(22, 22, 22);
 }
