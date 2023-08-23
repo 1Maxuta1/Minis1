@@ -7,7 +7,10 @@ const MyPosts = (props) => {
   // let addUser = React.createRef();
 
   let addPost = () => {
+    const trimmedText = newPostElement.current.value.trim();
+  if (trimmedText !== "") {
     props.addPost();
+  }
     // props.dispatch(addPostActionCreator());
   };
 

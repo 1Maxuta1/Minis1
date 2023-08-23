@@ -9,42 +9,41 @@ import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import FriendsContainer from "./components/Friends/FriendsContainer";
-import AuthPage from "./components/AuthPage/AuthPage";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router";
 import { Hook } from "./testHooks";
+import RegistrationPage from "./components/Auth/register/RegistrationPage";
+import LoginPage from "./components/Auth/login/LoginPage";
+import PrivateRoute from "./auth/PrivateRoute";
+import { Auth } from "./auth/auth";
 
 const App = (props) => {
   return (
-    // <AuthPage />
-    // true ?
-
-    // ) : (
     <div className={styles.app_wrapper}>
       <Header />
       <Nav />
       <div className={styles.app_wrapper_content}>
         <Routes>
-          <Route
+        <Route path="/"
+          element={<Auth/>}
+        />
+          <PrivateRoute
             path="/profile"
             element={
               <Profile
-              // store={props.store}
-              // addPost={store.addPost.bind(store)}
-              // updateNewPostText={store.updateNewPostText.bind(store)}
               />
             }
           />
-          <Route
+          <PrivateRoute
             path="/messages"
             element={<MessagesContainer />}
             // store={props.store}
           />
-          <Route path="/news" element={<News />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/friends" element={<FriendsContainer />} />
-          <Route path="/testhook" element={<Hook />} />
+          <PrivateRoute path="/news" element={<News />} />
+          <PrivateRoute path="/music" element={<Music />} />
+          <PrivateRoute path="/settings" element={<Settings />} />
+          <PrivateRoute path="/friends" element={<FriendsContainer />} />
+          <PrivateRoute path="/testhook" element={<Hook />} />
         </Routes>
       </div>
       {/* <SignUp/> */}

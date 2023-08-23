@@ -1,0 +1,49 @@
+
+.container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inputContainer {
+    position: relative;
+    margin-top: 0.25rem;
+  }
+  
+  .input {
+    /* Tailwind classes for styling input element */
+  }
+  
+  .errorBorder {
+    border: 1px solid #ff0000;
+  }
+  
+  .iconContainer {
+    position: absolute;
+    inset-y: 0;
+    right: 0.5rem;
+    display: flex;
+    items: center;
+    pointer-events: none;
+    font-size: 1.5rem;
+    color: #8a63d2;
+  }
+  
+  .toggleButton {
+    position: absolute;
+    inset-y: 0;
+    right: 0.75rem;
+    display: flex;
+    items: center;
+    cursor: pointer;
+  }
+  
+  .toggleIcon {
+    font-size: 1.5rem;
+    color: #8a63d2;
+    margin-right: 0.5rem;
+  }
+  
+  .errorText {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ff0000;
+  }

@@ -27,8 +27,9 @@ const Messages = (props) => {
   let newMessageBody = state.newMessageBody;
 
   const sendMessage = () => {
-    // props.addPost();
-    props.sendMessage();
+    if (newMessageBody.trim() !== "") {
+      props.sendMessage();
+    }
   };
 
   let onNewMessageBody = (event) => {

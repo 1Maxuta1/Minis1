@@ -16,7 +16,7 @@ class Friends extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <button onClick={this.getFriends}> Get Friends</button>
+        <button onClick={this.getFriends}> Add Friends</button>
         {this.props.friendsData.map((friend) => (
           <div key={friend.id}>
             <span>

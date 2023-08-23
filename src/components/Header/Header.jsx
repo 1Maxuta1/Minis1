@@ -4,10 +4,10 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo_block}>
+      <a href="/" className={styles.logo_block}>
         <img src="/img/logo.png" alt="Minis logo" className={styles.logo} />
         MINIS
-      </div>
+      </a>
       <div className={styles.icons}>
         <img src="/img/statistics.png" alt="" className={styles.icon} />
         <img src="/img/bell.png" alt="bell" className={styles.icon} />
