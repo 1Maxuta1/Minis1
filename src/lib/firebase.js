@@ -1,22 +1,22 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from 'firebase/firestore';
+import {getAuth, EmailAuthProvider} from "firebase/auth";
+
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyA5LY-ymlKPM3zKA92jxWs4SynPlQdPKvc",
-  authDomain: "minis-c4f03.firebaseapp.com",
-  projectId: "minis-c4f03",
-  storageBucket: "minis-c4f03.appspot.com",
-  messagingSenderId: "658531626423",
-  appId: "1:658531626423:web:ab83d46732e34b3d678c32",
-  measurementId: "G-58D7E3HZ5S"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP__MESSAGING_SENDER_ID``,
+  appId: process.env._APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
-// Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const analytics = getAnalytics(app);
-export const googleAuthProvider = new GoogleAuthProvider();
 export const emailAuthProvider = new EmailAuthProvider();
+// export const googleAuthProvider = new GoogleAuthProvider();

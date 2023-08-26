@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { FaUser } from "react-icons/fa";
@@ -8,8 +8,27 @@ import "react-datepicker/dist/react-datepicker.css";
 import styles from "./RegistrationPage.module.css"; 
 import InputField from "../input/InputField";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import { UserAuth } from "../../../auth/AuthContext";
 
 const RegistrationPage = () => {
+  const {createUser} = UserAuth()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+
+  const handleSubmit = async (e) => {
+  e.preventDefault()
+  setError('')
+  try{
+    await(createUser(email,password)
+    )
+  }
+  catch(e){
+    setError(e.message)
+    console.log(e.message)
+  }
+  }
+ 
     const validate = Yup.object({
       firstName: Yup.string().required("First name required!"),
       lastName: Yup.string().required("Last name required!"),
@@ -59,7 +78,7 @@ const RegistrationPage = () => {
       >
         {(formik) => (
           <div className={styles.formContainer}>
-            <Form className={styles.form}>
+            <Form onSubmit={handleSubmit} className={styles.form}>
               <h1 className={styles.formTitle}>Sign up</h1>
               <div className={styles.loginLinkContainer}>
                 <h1 className={styles.loginLinkText}>
@@ -69,7 +88,7 @@ const RegistrationPage = () => {
                   Log in
                 </Link>
               </div>
-              <InputField
+              <InputField 
                 type="text"
                 name="firstName"
                 placeholder="First name"
@@ -82,6 +101,7 @@ const RegistrationPage = () => {
                 icon={<FaUser />}
               />
               <InputField
+              onChange={(e)=>setEmail(e.target.value)}
                 type="email"
                 name="email"
                 placeholder="Your email"
@@ -112,6 +132,7 @@ const RegistrationPage = () => {
                 </div>
               )}
               <InputField
+              onChange={(e)=>setPassword(e.target.value)}
                 type="password"
                 name="password"
                 placeholder="Password"

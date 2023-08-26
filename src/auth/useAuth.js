@@ -1,26 +1,27 @@
-import { useContext, createContext, useEffect, useState } from "react";
-import { auth } from "./path-to-your-firebase-config"; // Импортируйте конфигурацию Firebase
+// import { useContext, createContext, useEffect, useState } from "react";
+// import { auth } from "../lib/firebase"; 
 
-const AuthContext = createContext();
+// const AuthContext = createContext();
 
-export function useAuth() {
-  return useContext(AuthContext);
-}
+// export function useAuth() {
+//   return useContext(AuthContext);
+// }
 
-export function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState();
+// export function AuthProvider({ children }) {
+//   const [currentUser, setCurrentUser] = useState();
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setCurrentUser(user);
-    });
+//   useEffect(() => {
+//     const unsubscribe = auth.onAuthStateChanged((user) => {
+//       setCurrentUser(user);
+//     });
 
-    return unsubscribe;
-  }, []);
+//     return unsubscribe;
+//   }, []);
 
-  const value = {
-    currentUser,
-  };
+//   const value = {
+//     currentUser,
+//   };
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
+//   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+// }
+

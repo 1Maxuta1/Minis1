@@ -12,10 +12,9 @@ import FriendsContainer from "./components/Friends/FriendsContainer";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router";
 import { Hook } from "./testHooks";
-import RegistrationPage from "./components/Auth/register/RegistrationPage";
-import LoginPage from "./components/Auth/login/LoginPage";
 import PrivateRoute from "./auth/PrivateRoute";
 import { Auth } from "./auth/auth";
+import { AuthContextProvider } from "./auth/authContext";
 
 const App = (props) => {
   return (
@@ -23,6 +22,7 @@ const App = (props) => {
       <Header />
       <Nav />
       <div className={styles.app_wrapper_content}>
+      <AuthContextProvider>
         <Routes>
         <Route path="/"
           element={<Auth/>}
@@ -45,6 +45,7 @@ const App = (props) => {
           <PrivateRoute path="/friends" element={<FriendsContainer />} />
           <PrivateRoute path="/testhook" element={<Hook />} />
         </Routes>
+        </AuthContextProvider>
       </div>
       {/* <SignUp/> */}
     </div>

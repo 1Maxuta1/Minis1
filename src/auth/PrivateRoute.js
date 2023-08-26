@@ -1,15 +1,17 @@
-import React from "react";
-import { Route, Navigate } from "react-router-dom";
-import { useAuth } from "./useAuth.js"; // Импортируйте ваш контекст аутентификации
+// import React, { useContext } from "react";
+// import { Route, Navigate } from "react-router-dom";
+// import { AuthContextProvider } from "./authContext"; // Replace with the actual path to your AuthContext
 
-const PrivateRoute = ({ element, fallbackPath }) => {
-  const { currentUser } = useAuth(); // Получите текущего пользователя из вашего контекста аутентификации
+// const PrivateRoute = ({ element, ...rest }) => {
+//   const { currentUser } = useContext(AuthContextProvider);
 
-  if (currentUser) {
-    return element;
-  } else {
-    return <Navigate to={fallbackPath} />;
-  }
-};
+//   return (
+//     !!currentUser ? (
+//       React.createElement(element, { ...rest })
+//     ) : (
+//       <Navigate to="/login" />
+//     )
+//   );
+// };
 
-export default PrivateRoute;
+// export default PrivateRoute;
